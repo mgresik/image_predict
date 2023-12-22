@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.7.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>
+  </head>
+
+  <body class="container">
+    <div id="container" class="center-block">
+      <h1>А как на счёт того, что приложение угадает цифру?</h1>
+      <h4>Изобразите любую пришедшую вам на ум цифру внутри квадрата</h4>
+
+      <canvas
+        id="canvas"
+        width="400px"
+        height="400px"
+        class="canvas"
+        style="border: 1px solid #b9bfc9; margin-top: 10px"
+      ></canvas>
+
+      <p>Вы нарисовали цифру: <span id="result"></span></p>
+
+      <div>
+        <button type="button" class="btn" onclick="erase()">Стереть</button>
+        <button type="button" class="btn" onclick="predictModel()">
+          Распознать цифру
+        </button>
+      </div>
+
+      <p>Создатель приложения: <span class="creator">Максим Гресик</span></p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
